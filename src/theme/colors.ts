@@ -8,8 +8,8 @@ interface Colors {
 }
 
 const colors: Colors = {
-  primaryBackground: '#000814',
-  secondaryBackground: '#001d3d',
+  primaryBackground: '#001D3D',
+  secondaryBackground: '#000814',
   thirdBackground: '#003566',
   primaryFunctional: '#ffc300',
   secondaryFunctional: '#ffd60a',
