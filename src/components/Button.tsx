@@ -1,23 +1,55 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import colors from '../theme/colors';
 
+const appear = keyframes`
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+`;
+
+const disappear = keyframes`
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+`;
+
 const StyledButton = styled.button`
-  padding: 12px 8px 4px 8px;
-  margin: 8px;
   background-color: transparent;
   border: none;
-  color: ${colors.primaryFunctional};
-  text-transform: uppercase;
-  font-weight: bold;
+  padding: 8px;
+  margin: 8px;
+  color: ${colors.primaryText};
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
 
-  &:hover {
-    color: ${colors.secondaryFunctional};
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: ${colors.primaryFunctional};
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 0.8s ease-out;
   }
-  &:active {
-    color: ${colors.secondaryFunctional};
-    border-radius: 0.6px;
-    border-bottom: 3px solid ${colors.secondaryFunctional};
+
+  &:hover:after {
+    animation: ${appear} 0.5s forwards;
+  }
+
+  &:not(:hover):after {
+    animation: ${disappear} 0.4s forwards;
   }
 `;
 
