@@ -1,16 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import colors from '../theme/colors';
+import Button from './Button';
 
-const Wrapper = styled.div``;
-const StyledParagraph = styled.p`
-  margin: 0;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const NavigationTopBar = () => {
   return (
     <Wrapper>
-      <StyledParagraph>dupa</StyledParagraph>
+      <Button title='LOGO' />
+      <div>
+        <Button title='O FIRMIE' />
+        <Button title='OFERTA' />
+        <Button title='KONTAKT' />
+      </div>
     </Wrapper>
   );
 };
