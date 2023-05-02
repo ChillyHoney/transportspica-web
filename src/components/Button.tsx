@@ -23,11 +23,11 @@ const disappear = keyframes`
 const StyledButton = styled.button`
   background-color: transparent;
   border: none;
-  padding: 8px;
+  padding: 16px;
   margin: 8px;
   color: ${colors.primaryText};
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
   cursor: pointer;
   position: relative;
 

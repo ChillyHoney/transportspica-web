@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import colors from '../theme/colors';
 import Button from './Button';
 
 const Wrapper = styled.div`

@@ -1,5 +1,6 @@
 import React from 'react';
 import NavigationTopBar from './components/NavigationTopBar';
+import AboutCompany from './components/LogoScreen';
 import styled from 'styled-components';
 import colors from './theme/colors';
 
@@ -12,6 +13,7 @@ const App = () => {
   return (
     <Wrapper>
       <NavigationTopBar />
+      <AboutCompany />
     </Wrapper>
   );
 };
