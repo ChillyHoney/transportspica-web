@@ -5,7 +5,6 @@ import mySvg from './svg/HamburgerIcon.svg';
 
 const StyledSVG = styled(ReactSVG)`
   width: 48px;
-  padding: 0 16px 0 16px;
 `;
 
 const HamburgerIcon = () => {
