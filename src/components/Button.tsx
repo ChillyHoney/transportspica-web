@@ -6,7 +6,7 @@ interface ButtonProps {
   title?: string;
   icon?: React.ReactNode;
   underline?: boolean;
-  fullWidth?: boolean;
+  onClick?: () => void;
 }
 
 const appear = keyframes`
@@ -70,9 +70,9 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `;
 
-const Button = ({ title, icon, underline = true }: ButtonProps) => {
+const Button = ({ title, icon, underline = true, onClick }: ButtonProps) => {
   return (
-    <StyledButton underline={underline}>
+    <StyledButton underline={underline} onClick={onClick}>
       {title}
       {icon}
     </StyledButton>
